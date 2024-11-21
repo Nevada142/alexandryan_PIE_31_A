@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная 2</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Лабораторная работа №2</h1>
+        <nav>
+            <a href="../index.html">Главная</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Задание 1</h1>
+            <p>Дана сторона квадрата a. Найти квадрат его периметра P = 4·a</p>
+            <div class="inputs">
+                <label for="a">Введите a:</label>
+                <input type="text" id="value_a" placeholder="0">
+                <button onclick="calculate_perimeter_square()">Вычислить</button>
+            </div>
+            <div class="result">
+                Ответ: <span id="output1"></span>
+            </div>
+        </div>
+        
+        <div class="container">
+            <h1>Задание 2</h1>
+            <p>Дано расстояние L в сантиметрах. Используя операцию деления нацело, найти количество полных метров в нем (1 метр = 100 см).</p>
+            <div class="inputs">
+                <label for="a">Введите L:</label>
+                <input type="text" id="value_l" placeholder="0">
+                <button onclick="calculate_meters()">Вычислить</button>
+            </div>
+            <div class="result">
+                Ответ: <span id="output2"></span>
+            </div>
+        </div>
+        </main>
+    <footer>
+        <p>&copy; 2024 Все права защищены.</p>
+    </footer>
+    <script src="../scripts/script2.js"></script>
+</body>
+</html>
