@@ -1,5 +1,5 @@
 function calculate_perimeter_square(){
-    let a = parseInt(document.getElementById('value_a').value)
+    let a = +(document.getElementById('value_a').value)
 
     if (isNaN(a) || a < 0){
         document.getElementById('output1').innerHTML = 'Неккоректно введены данные, измените ввод!'
@@ -12,7 +12,7 @@ function calculate_perimeter_square(){
 
 
 function calculate_meters(){
-    let L = parseInt(document.getElementById('value_l').value)
+    let L = +(document.getElementById('value_l').value)
 
     if (isNaN(L) || L < 0){
         document.getElementById('output2').innerHTML = 'Неккоректно введены данные, измените ввод!'

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная 4</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Лабораторная работа №4</h1>
+        <nav>
+            <a href="../index.html">Главная</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Задание 1</h1>
+            <p>Дано целое число A. Проверить истинность высказывания: «Число A является положительным и двузначным»</p>
+            <div class="inputs">
+                <label for="value_A">Введите число:</label>
+                <input type="text" id="value_A" placeholder="0">
+                <button onclick="check_condition1()">Вычислить</button>
+            </div>
+            <div class="result">
+                Ответ: <span id="output1"></span>
+            </div>
+        </div>
+        
+        <div class="container">
+            <h1>Задание 2</h1>
+            <p>Дано целое число. Если оно является положительным и четным, то прибавить к нему 1; в противном случае не изменять его. Вывести полученное число.</p>
+            <div class="inputs">
+                <label for="value_num">Введите число:</label>
+                <input type="text" id="value_num" placeholder="0">
+                <button onclick="check_condition2()">Вычислить</button>
+            </div>
+            <div class="result">
+                Ответ: <span id="output2"></span>
+            </div>
+        </div>
+        </main>
+    <footer>
+        <p>&copy; 2024 Все права защищены.</p>
+    </footer>
+    <script src="../scripts/script4.js"></script>
+</body>
+</html>
