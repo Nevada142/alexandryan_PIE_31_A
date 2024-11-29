@@ -33,3 +33,45 @@ function check_condition2() {
         document.getElementById('output2').innerHTML = `${num}`;
     }
 }
+
+function solve_func(x) {
+    let a = 2.1;
+    let b = 6.7;
+
+    if (x < -2) {
+        return Math.pow(x, 3) - 2 * a;
+    } else if (x <= 5) {
+        return Math.log(Math.abs(Math.cos(b*x)));
+    } else {
+        return Math.pow(x, 2) * Math.exp(x);
+    }
+}
+
+function solve_func4(x) {
+    let a = 2.1;
+    let b = 6.7;
+
+    switch(x){
+        case -3: 
+            return Math.pow(x, 3) - 2 * a;
+        case 4:
+            return Math.log(Math.abs(Math.cos(b*x)));
+        case 6:
+            return Math.pow(x, 2) * Math.exp(x);
+        default:
+            return "Функция не определена при таком значении Х"
+    }
+}
+
+function get_func_result() {
+    let x = +(document.getElementById('value_x').value);
+    document.getElementById('output3').innerHTML = `${solve_func(x)}`;
+}
+
+function get_func_result4() {
+    let x = +(document.getElementById('value_x4').value);
+    document.getElementById('output4').innerHTML = `${solve_func4(x)}`;
+}
+
+
+
