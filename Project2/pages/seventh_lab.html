@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная 7</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Лабораторная работа №7</h1>
+        <nav>
+            <a href="../index.html">Главная</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Задание 1</h1>
+            <p>. Даны  целые  положительные  числа  M и  N. Сформировать целочисленную матрицу размера M × N, у которой все  элементы  I -й строки  имеют значение 10·I (I = 1, . . ., M )</p>
+            <div class="inputs">
+                <label for="value_m">Введите M, N:</label>
+                <input type="text" id="value_m" placeholder="0">
+                <input type="text" id="value_n" placeholder="0">
+                <button onclick="get_array71()">Вычислить</button>
+            </div>
+            <div class="result">
+                Ответ: <span id="output1"></span>
+            </div>
+        </div>
+        
+        <div class="container">
+            <h1>Задание 2</h1>
+            <p>Дана  матрица  размера  M × N.  Поменять  местами  строки,  содержащие минимальный и максимальный элементы матрицы.</p>
+            <div class="inputs">
+                <label for="value_M">Введите M, N:</label>
+                <input type="text" id="value_M" placeholder="0">
+                <input type="text" id="value_N" placeholder="0">
+                <button onclick="get_array72()">Вычислить</button>
+            </div>
+            <div class="result">
+                Ответ: <span id="output2"></span>
+            </div>
+        </div>
+        </main>
+    <footer>
+        <p>&copy; 2024 Все права защищены.</p>
+    </footer>
+    <script src="../scripts/script7.js"></script>
+</body>
+</html>

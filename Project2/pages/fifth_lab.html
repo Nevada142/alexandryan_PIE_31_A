@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная 5</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Лабораторная работа №5</h1>
+        <nav>
+            <a href="../index.html">Главная</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Задание 1</h1>
+            <p>Дано  целое  число  N    (> 0).  Сформировать   и  вывести  целочисленный массив размера N, 
+                содержащий N первых положительных нечетных чисел: 1, 3, 5, . . . .</p>
+            <div class="inputs">
+                <label for="value_n">Введите целое число N (не больше 10):</label>
+                <input type="text" id="value_n" placeholder="0"></input>
+                <button onclick="get_array()">Вычислить</button>
+            </div>
+            <div class="result">
+                Ответ: <span id="output1"></span>
+            </div>
+        </div>
+        
+        <div class="container">
+            <h1>Задание 2</h1>
+            <p>Даны два массива A и B одинакового размера N. Сформировать новый массив  C  того же размера, каждый элемент  
+                которого равен  максимальному из элементов массивов A и B с тем же индексом.</p>
+            <div class="inputs">
+                <label for="array_A">Введите два массива одинакового размера (максимум 10 элементов):</label>
+                <input type="text" id="array_A" placeholder="Например 2, 3, 5.5">
+                <input type="text" id="array_B" placeholder="Например 2, 3, 5.5">
+                <button onclick="get_array2()">Вычислить</button>
+            </div>
+            <div class="result">
+                Ответ: <span id="output2"></span>
+            </div>
+        </div>
+        </main>
+    <footer>
+        <p>&copy; 2024 Все права защищены.</p>
+    </footer>
+    <script src="../scripts/script5.js"></script>
+</body>
+</html>

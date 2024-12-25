@@ -1,35 +1,51 @@
-function is_positive(number) {
-    return (number > 0);
-}
-
 function is_even(number) {
-    return (number % 2 === 0);
+    return (number % 2 === 0 && Number.isInteger(number));
 }
 
-function is_two_digits(number) {
-    return (10 <= number && number < 100 && Number.isInteger(number));
-}
+function calculate_evens() {
+    let flag = true;
+    let cnt = 0
+    let productOfEven = 1;
+    let text = (document.getElementById('numbersInput').value);
+    let numbers = text.split(',');
 
-function check_condition1() {
-    let A = +(document.getElementById('value_A').value);
+    for (let i = 0; i<10; i++){
+        if (is_even(+numbers[i])) {
+            productOfEven = productOfEven * +numbers[i];
+            cnt++
+        } 
 
-    if (isNaN(A) || !Number.isInteger(A)) {
-        document.getElementById('output1').innerHTML = 'Некорректно введены данные, измените ввод!';
-    } else if (is_positive(A) && is_two_digits(A)) {
-        document.getElementById('output1').innerHTML = "True";
-    } else {
-        document.getElementById('output1').innerHTML = "False";
+        if (isNaN(+numbers[i])){
+            flag = false;
+        }
     }
+    
+    if (flag){
+        document.getElementById('output1').innerHTML = `${productOfEven}`
+    } else {
+        document.getElementById('output1').innerHTML = 'Неккоректный ввод!'
+    }
+
+    if (cnt === 0){
+        document.getElementById('output1').innerHTML = 'Нет четных чисел!'
+    }
+
 }
 
-function check_condition2() {
-    let num = +(document.getElementById('value_num').value);
+function calculate_sequence() {
+    let max = +document.getElementById('value_max').value;
+    let min = +document.getElementById('value_min').value;
+    let step = +document.getElementById('value_step').value;
+    let numbers = [];
 
-    if (isNaN(num) || !Number.isInteger(num)) {
-        document.getElementById('output2').innerHTML = 'Некорректно введены данные, измените ввод!';
-    } else if (is_positive(num) && is_even(num)) {
-        document.getElementById('output2').innerHTML = `${num + 1}`;
-    } else {
-        document.getElementById('output2').innerHTML = `${num}`;
+    if (isNaN(max) || isNaN(min) || isNaN(step) || step === 0 || max < min) {
+        document.getElementById('output2').innerHTML = 'Ошибка: введите корректные значения.';
+        return; 
     }
+
+    for (let i = min; i <= max; i += step) {
+        numbers.push(i);
+    }
+
+    document.getElementById('output2').innerHTML = `${numbers.join(' ')}`;
 }

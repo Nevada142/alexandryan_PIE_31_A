@@ -39,7 +39,7 @@ function solve_func(x) {
     let b = 6.7;
 
     if (x < -2) {
-        return Math.pow(x, 3) - 2 * a;
+        return Math.pow(x, 3) + 2 * a;
     } else if (x <= 5) {
         return Math.log(Math.abs(Math.cos(b*x)));
     } else {

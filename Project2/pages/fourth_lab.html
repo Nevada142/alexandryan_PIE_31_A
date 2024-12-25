@@ -18,9 +18,9 @@
             <h1>Задание 1</h1>
             <p>Даны десять вещественных чисел. Найти произведение всех четных чисел</p>
             <div class="inputs">
-                <label for="value_A">Введите число:</label>
-                <input type="text" id="value_A" placeholder="0">
-                <button onclick="check_condition1()">Вычислить</button>
+                <label for="numbersInput">Введите 10 чисел:</label>
+                <textarea id="numbersInput" rows="3" cols="35" placeholder="Например: 2.5, 4, 3.1, 6, 7, 8, 9, 10, 11.5, 12"></textarea>
+                <button onclick="calculate_evens()">Вычислить</button>
             </div>
             <div class="result">
                 Ответ: <span id="output1"></span>
@@ -33,9 +33,11 @@
                 Например, если минимум 10, максимум 35, шаг 5, то вывод должен быть таким: 10 15 20 25 30 35. 
                 Минимум, максимум и шаг указываются пользователем (считываются с клавиатуры)..</p>
             <div class="inputs">
-                <label for="value_num">Введите число:</label>
-                <input type="text" id="value_num" placeholder="0">
-                <button onclick="check_condition2()">Вычислить</button>
+                <label>Введите числа:</label>
+                <input type="text" id="value_min" placeholder="Минимум">
+                <input type="text" id="value_max" placeholder="Максимум">
+                <input type="text" id="value_step" placeholder="Шаг">
+                <button onclick="calculate_sequence()">Вычислить</button>
             </div>
             <div class="result">
                 Ответ: <span id="output2"></span>
